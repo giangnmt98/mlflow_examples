@@ -21,23 +21,16 @@ python hello_world.py
 
 
 ### Using mlflow run
+##### Note: Set  --env-manager=local nếu muốn chạy trực tiếp trên local env
 
-#### mlflow run local
 ```
 mlflow run . -P alpha=.01 -P run_origin=LocalRun 
 ```
 Có thể chọn một experiment name (or ID) cụ thể:
 ```
 mlflow run . \
-  --experiment-name=hello_world \
+  --experiment-name=hello_world --version=master \
   -P alpha=.01 -P run_origin=LocalRun
-```
-
-#### mlflow run git
-```
-mlflow run  https://github.com/amesar/mlflow-examples.git#hello_world \
-  --experiment-name=hello_world \
-  -P alpha=100 -P run_origin=GitRun
 ```
 
 ### Kiểm tra kết quả logging qua Tracking UI
