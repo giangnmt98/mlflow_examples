@@ -48,7 +48,4 @@ if __name__ == "__main__":
     print("Arguments:")
     for arg in vars(args):
         print(f"  {arg}: {getattr(args, arg)}")
-    # Set experiment cho lần chạy, nếu chưa có experiment nào có tên được set thì MLflow sẽ tự tạo mới,
-    # nếu đã có rồi thì sẽ tạo thêm 1 version mới
-    # mlflow.set_experiment('hello_word')
     run(args.alpha, args.run_origin)

@@ -1,4 +1,4 @@
-name: mlflow-examples-hello_world
+name: hello_world
 channels:
   - conda-forge
 dependencies:
